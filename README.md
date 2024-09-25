@@ -2,9 +2,20 @@
 
 FineXtract extracts the fine-tuning dataset based on the guided denoising process from pretrained DM to fine-tuned DM. Below we provide the process from fine-tuning to extracting on VanGogh's paintings.
 
+### Downloading SSCD Models
+Run following command to download pretrained SSCD models for evaluating extractions
+
+```
+mkdir -p pretrainedmodels
+wget -P pretrainedmodels https://dl.fbaipublicfiles.com/sscd-copy-detection/sscd_disc_large.torchscript.pt
+```
+
+
 ### Requirements
 
-See file "requirements.txt".
+```
+pip install -r requirements.txt
+```
 
 ### Training Personalized DM
 

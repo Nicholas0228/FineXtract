@@ -4,14 +4,10 @@ torch
 torchvision
 tqdm
 transformers
-typing-extensions=
+typing-extensions
 bitsandbytes
 scikit-learn
-csv
 networkx
-shutil
-threading
-multiprocessing
 scipy
 -e git+https://github.com/openai/CLIP.git@main#egg=clip
 -e git+https://github.com/CompVis/taming-transformers.git@master#egg=taming-transformers
