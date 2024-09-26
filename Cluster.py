@@ -254,9 +254,6 @@ def find_cluster(src_path, tar_path, num_images, per_img_num, countnum=1, clique
         for clique_size in clique_size_list:
             subcount = 0
             print(f"{threshold:.2f}_{clique_size}: {len(cliques[count])}")
-            
-            # saved_path = os.path.join('clique_imgs', f"{threshold:.2f}_{clique_size}")
-            # saved_path = os.path.join('/work3/xiaoyuwu/clique_images_min/10_200_v1.4_7.5_cfg_500gen_dino/', f"{threshold:.2f}_{clique_size}")
             saved_path = os.path.join(tar_path, f"{threshold:.2f}_{clique_size}")
             for cliques_set in cliques[count]:
                 saved_path_dir = os.path.join(saved_path, str(cliques_set[0]))
@@ -349,11 +346,6 @@ def find_average_id(threshold_dir_sub, metric_type):
 
 
 def compute_metrics(src_dir, src_path, training_num=10):
-    # src_dir = '/work3/xiaoyuwu/Clustering'
-    # for subclass in os.listdir(src_dir):
-    # class_id_path = os.path.join(src_dir, subclass)
-    # class_id_path = src_dir
-    # for subsubclass in os.listdir(class_id_path):
 
     metric_type = 'sscd'
 

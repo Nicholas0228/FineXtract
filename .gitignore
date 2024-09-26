@@ -1,1 +1,6 @@
 *.pt
+/checkpoints/
+/Generator_Output/
+/Cluster_Output/
+/Cluster_Filtered/
+/Cluster_Extracted/
