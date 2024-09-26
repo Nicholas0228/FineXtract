@@ -1,6 +1,6 @@
 # FineXtract: Extracting Training Data from Personalized Diffusion Models
 
-FineXtract is a framework designed to extract the fine-tuning dataset from personalized diffusion models (DMs), leveraging the guided denoising process between pretrained and fine-tuned DMs. In this document, we detail the steps for fine-tuning and dataset extraction using Van Gogh's paintings as an example.
+FineXtract is a framework designed to extract the fine-tuning dataset from personalized diffusion models (DMs), leveraging the guided denoising process between pretrained and fine-tuned DMs. In this document, we detail the steps for fine-tuning and dataset extraction using Monet's paintings as an example.
 
 ## Preparations
 
@@ -14,6 +14,7 @@ wget -P pretrainedmodels https://dl.fbaipublicfiles.com/sscd-copy-detection/sscd
 ```
 
 ### Requirements
+
 Install the necessary Python dependencies listed in `requirements.txt`.
 
 ```
@@ -22,7 +23,7 @@ pip install -r requirements.txt
 
 ## Training Personalized Diffusion Model
 
-Run the following code to fine-tune a DM based on VanGogh's paintings.
+Run the following code to fine-tune a DM based on Monet's paintings.
 
 ```
 Python Trainer.py
@@ -38,7 +39,7 @@ Run the following code to generate images using the fine-tuned checkpoints.
 Python Generator.py
 ```
 
-The generated images will be saved in the `Generator_Output` directory. 
+The generated images will be saved in the `Generator_Output` directory.
 
 ## Running the Clustering Algorithm
 
