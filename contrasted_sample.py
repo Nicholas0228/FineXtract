@@ -173,6 +173,7 @@ def main():
     if args.lora:
         pipe_finetune.unet.load_attn_procs(args.model_path)
     else:
+        del pipe_finetune.unet
         pipe_finetune.unet = UNet2DConditionModel.from_pretrained(f"{args.model_path}/unet", local_files_only=True).to("cuda")
     try:
         if args.lora:
@@ -181,6 +182,10 @@ def main():
             pipe_finetune.text_encoder = CLIPTextModel.from_pretrained(f"{args.model_path}/text_encoder", local_files_only=True).to("cuda")
     except:
         print('No text encoder found. Alert!')
+        del pipe_finetune.text_encoder
+        pipe_finetune.text_encoder = pipe.text_encoder
+        del pipe_finetune.vae
+        pipe_finetune.vae = pipe.vae
 
     for i in tqdm(range(args.gen_num)):
         if not os.path.exists(f'start_latents/{i}.pt'):

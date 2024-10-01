@@ -55,7 +55,7 @@ def main():
     output_path = args.output_path
     if args.lora:
         pipe = DiffusionPipeline.from_pretrained(
-            "CompVis/stable-diffusion-v1-4", dtype=torch.float16, safety_checker=None, local_files_only=False)
+            "CompVis/stable-diffusion-v1-4",  safety_checker=None, local_files_only=False)
         print('Loading Lora', args.model_path)
         
         pipe.unet.load_attn_procs(args.model_path)
@@ -63,11 +63,12 @@ def main():
     else:
         try:
             pipe = DiffusionPipeline.from_pretrained(
-                    args.model_path, dtype=torch.float16, safety_checker=None, local_files_only=False).to("cuda")
+                    args.model_path,  safety_checker=None, local_files_only=False).to("cuda")
         except:
             pipe = DiffusionPipeline.from_pretrained(
-                    "CompVis/stable-diffusion-v1-4", dtype=torch.float16, safety_checker=None, local_files_only=False).to("cuda")
+                    "CompVis/stable-diffusion-v1-4",  safety_checker=None, local_files_only=False).to("cuda")
             model_path = args.model_path
+            del pipe.unet
             pipe.unet = UNet2DConditionModel.from_pretrained(f"{model_path}/unet", local_files_only=False).to("cuda")
             try:
                 pipe.text_encoder = CLIPTextModel.from_pretrained(f"{model_path}/text_encoder", local_files_only=False).to("cuda")
