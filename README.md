@@ -50,3 +50,16 @@ Python Cluster.py
 ```
 
 The final clustering results will be saved in the `Cluster_Extracted` directory.
+
+
+## Citation
+
+If you find our work valuable and utilize it, we kindly request that you cite our paper.
+
+```bibtex
+@inproceedings{wuleveraging,
+  title     = {Leveraging Model Guidance to Extract Training Data from Personalized Diffusion Models},
+  author    = {Wu, Xiaoyu and Zhang, Jiaru and Wu, Steven},
+  booktitle = {Proceedings of the 42nd International Conference on Machine Learning (ICML)},
+  year      = {2025}
+}
