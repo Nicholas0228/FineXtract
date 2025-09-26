@@ -9,6 +9,7 @@ FineXtract is a framework designed to extract the fine-tuning dataset from perso
 </p>
 
 [![arXiv](https://img.shields.io/badge/arXiv-2410.03039-red.svg)](https://arxiv.org/pdf/2410.03039)
+> Extraction results from real-world fine-tuned checkpoints on HuggingFace using our FineXtract. **Top:** Extracted images. **Bottom:** Corresponding training images.
 
 ## Preparations
 
