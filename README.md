@@ -2,6 +2,13 @@
 
 FineXtract is a framework designed to extract the fine-tuning dataset from personalized diffusion models (DMs), leveraging the guided denoising process between pretrained and fine-tuned DMs. In this document, we detail the steps for fine-tuning and dataset extraction using Monet's paintings as an example.
 
+
+
+<p align="center">
+<img  src="assets/example.png">
+</p>
+[![arXiv](https://img.shields.io/badge/arXiv-2410.03039-red.svg)](https://arxiv.org/pdf/2410.03039)
+
 ## Preparations
 
 ### Downloading SSCD Models
